@@ -1,24 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Angel Kittiyachavalit">
+    <meta name="description" content="Think you know what the wealth distribution is in the US? Let's find out!">
+
     <title>Wealth Distribution</title>
-    <link href='css/base.less' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
+
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   	<script src="js/raphael-min.js"></script>
     <script src="js/wealth.js"></script>
     <script src="js/less-1.3.0.min.js"></script>
+    <script src="js/less.js"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet/less" href="css/base.less">
+
 	</head>
 	<body>
 	  <h1>What is the<br /><span class="title-highlight">current wealth distribution</span><br />in the US?</h1>
-    <form>
-      <input id="top" type="text" />
-      <input id="second" type="text" />
-      <input id="middle" type="text" />
-      <input id="fourth" type="text" />
-      <input id="bottom" type="text" />
-    </form>
-    <div id="pie-chart">
+    <div class="form-fields">
+      <div class="container">
+
+        <div class="row">
+          <div class="span3 offset1">
+            <p>Enter the percent distribution for each group below:
+            <form>
+              <div>
+                <label>Top 20%</label>
+                <input id="top" type="text" />%
+              </div>
+              <div>
+                <label>2nd 20%</label>
+                <input id="second" type="text" />%
+              </div>
+              <div>        
+                <label>Middle 20%</label>
+                <input id="middle" type="text" />%
+              </div>
+              <div>
+                <label>4th 20%</label>
+                <input id="fourth" type="text" />%
+              </div>
+              <div>
+                <label>Bottom 20%</label>
+                <input id="bottom" type="text" />%
+              </div>
+              <div>
+                <a href="/">< Go Back</a>
+                <button id="submit-cont" type="submit" value="submit">
+                <span>Submit & Continue</span>
+              </div>
+            </form>
+          </div>
+
+          <div class="span8" id="pie-chart">
+          </div>
+        </div>
+
+      </div>
     </div>
+
 	</body>
 </html>
