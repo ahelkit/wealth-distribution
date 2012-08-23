@@ -1,6 +1,7 @@
 var request = require("request");
 var express = require("express");
-var app = express.createServer();
+var express = require("express");
+var app = express();
 var fs = require("fs");
 
 app.use(express.bodyParser());
