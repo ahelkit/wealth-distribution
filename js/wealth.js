@@ -61,7 +61,7 @@ $(function () {
             labels.push($(this).attr("id"));
         });
         $("#pie-chart").empty();
-        Raphael("pie-chart", 700, 700).pieChart(350, 350, 200, values, labels, "#fff", false);
+        Raphael("pie-chart", 600, 600).pieChart(350, 350, 200, values, labels, "#fff", false);
     });
-    Raphael("pie-chart", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+    Raphael("pie-chart", 600, 600).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
 });

@@ -1,5 +1,6 @@
 body {
   font-family: 'Lato';
+  font-size: 16px;
 }
 
 h1{
@@ -10,6 +11,12 @@ h1{
 
 span.title-highlight {
   color: #f86125;
+}
+
+p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -26,11 +33,53 @@ input {
   -webkit-appearance: none;
 }
 
+label {
+  color: #ffffff;
+}
+
+.top-label,
+.second-label,
+.middle-label,
+.fourth-label,
+.bottom-label {
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.top-label,
+.second-label,
+.fourth-label {
+  width: 57px;
+}
+
+.top-label {
+  background: #e64a33;
+}
+
+.second-label {
+  background: #e7bd13;
+}
+
+.middle-label {
+  background: #7bdbda;
+  width: 80px;
+}
+
+.fourth-label {
+  background: #bacf95;
+}
+
+.bottom-label {
+  background: #9abe7e;
+  width: 85px;
+}
+
 .submit-cont {
   background: #59a04e;
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;
+  margin-left: 15px;
   padding: 15px 25px;
   border: none;
   -moz-border-radius: 5px;
@@ -40,4 +89,16 @@ input {
   &:hover {
     background: #f86125;
   }
+}
+
+#pie-chart {
+  margin: -94px 0;
+  width: 700px;
+  height: 700px;
+}
+
+.back-submit {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
 }
