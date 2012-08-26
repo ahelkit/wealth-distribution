@@ -61,7 +61,7 @@ $(function () {
     $("#pie-chart-"+wealth.page).empty();
     Raphael("pie-chart-"+wealth.page, 700, 700).pieChart(350, 350, 200, values, labels, "#fff", false);
   });
-  $("form").submit(wealth.submitPage);
+  $("button.submit-cont").click(wealth.submitPage);
   $(".goback").click(wealth.goBack);
   Raphael("pie-chart-0", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
   Raphael("pie-chart-1", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
@@ -77,19 +77,22 @@ var wealth = {
   submitPage : function(ev){
     // once the page is submitted move on to the next page
     ev.preventDefault();
-    $("#page-"+wealth.page).hide();
-    wealth.page++;
-    $("#page-"+wealth.page).show();
-    
+    $("#page-"+wealth.page).fadeOut("fast",function(){
+      wealth.page++;
+      $("#page-"+wealth.page).fadeIn();
+    });
+
 
   },
   goBack: function(ev){
-    ev.preventDefault();
-    $("#page-"+wealth.page).hide();
-    wealth.page--;
-    $("#page-"+wealth.page).show();
-
     // go back to the previous page.
+    ev.preventDefault();
+    $("#page-"+wealth.page).fadeOut("fast",function(){
+      wealth.page--;
+      $("#page-"+wealth.page).fadeIn("fast");
+    });
+
+
   },
   sendData: function(){
     // Now that we collected all the data, send it to the server
