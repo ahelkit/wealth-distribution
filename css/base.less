@@ -21,7 +21,7 @@ p {
 }
 
 input {
-  width: 100px;
+  width: 80px;
   font-size: 24px;
   font-family: 'Lato';
   text-align: center;
@@ -33,6 +33,16 @@ input {
   -webkit-border-radius: 0;
   -webkit-appearance: none;
 }
+
+input {
+  float: left;
+  margin-left: 20px;
+}
+
+input[type=text] {
+  font-size:18px;
+}
+
 input[type=submit]{
   font-size:14px;
 }
@@ -43,6 +53,8 @@ input[type=submit]{
 
 label {
   color: #ffffff;
+  clear: both;
+  margin-bottom: 20px;
 }
 
 .top-label,
@@ -50,6 +62,7 @@ label {
 .middle-label,
 .fourth-label,
 .bottom-label {
+  float: left;
   padding: 10px 15px;
   text-transform: uppercase;
 }
@@ -58,6 +71,7 @@ label {
 .second-label,
 .fourth-label {
   width: 57px;
+  padding: 10px 29px;
 }
 
 .top-label {
@@ -70,6 +84,7 @@ label {
 
 .middle-label {
   background: #7bdbda;
+  padding: 10px 18px;
   width: 80px;
 }
 
@@ -99,7 +114,8 @@ label {
   }
 }
 
-#pie-chart {
+#pie-chart-0,
+#pie-chart-1 {
   margin: -94px 0 -55px;
   width: 700px;
   height: 700px;
@@ -108,5 +124,5 @@ label {
 .back-submit {
   display: block;
   margin: 0 auto;
-  width: 300px;
+  text-align: center;
 }

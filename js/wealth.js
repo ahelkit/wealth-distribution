@@ -50,7 +50,7 @@ Raphael.fn.pieChart = function (cx, cy, r, values, labels, stroke, initialState)
 
 $(function () {
   $("input").change(function() {
-    var values = [1,1,1,1,1],
+    var values = [0,0,0,0,0],
     labels = [];
     $("#page-"+wealth.page+" input[type=text]").each(function (i) {
       if ($(this).val() !== "") {
