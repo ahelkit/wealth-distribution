@@ -49,19 +49,52 @@ Raphael.fn.pieChart = function (cx, cy, r, values, labels, stroke, initialState)
 };
 
 $(function () {
-    $("input").change(function() {
-        var values = [],
-            labels = [];
-        $("input").each(function () {
-            if ($(this).val() !== "") {
-              values.push(parseInt($(this).val(), 10));
-            } else {
-              values.push(0);
-            }
-            labels.push($(this).attr("id"));
-        });
-        $("#pie-chart").empty();
-        Raphael("pie-chart", 700, 700).pieChart(350, 350, 200, values, labels, "#fff", false);
+  $("input").change(function() {
+    var values = [1,1,1,1,1],
+    labels = [];
+    $("#page-"+wealth.page+" input[type=text]").each(function (i) {
+      if ($(this).val() !== "") {
+        values[i] = parseInt($(this).val());
+      } 
+      labels.push($(this).attr("id"));
     });
-    Raphael("pie-chart", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+    $("#pie-chart-"+wealth.page).empty();
+    Raphael("pie-chart-"+wealth.page, 700, 700).pieChart(350, 350, 200, values, labels, "#fff", false);
+  });
+  $("form").submit(wealth.submitPage);
+  $(".goback").click(wealth.goBack);
+  Raphael("pie-chart-0", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+  Raphael("pie-chart-1", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+  //Raphael("pie-chart-2", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+
+
+
 });
+
+var wealth = {
+  page:0,
+  wealthPercentages: {},
+  submitPage : function(ev){
+    // once the page is submitted move on to the next page
+    ev.preventDefault();
+    $("#page-"+wealth.page).hide();
+    wealth.page++;
+    $("#page-"+wealth.page).show();
+    
+
+  },
+  goBack: function(ev){
+    ev.preventDefault();
+    $("#page-"+wealth.page).hide();
+    wealth.page--;
+    $("#page-"+wealth.page).show();
+
+    // go back to the previous page.
+  },
+  sendData: function(){
+    // Now that we collected all the data, send it to the server
+
+  }
+
+};
+
