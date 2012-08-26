@@ -63,8 +63,8 @@ $(function () {
   });
   $("button.submit-cont").click(wealth.submitPage);
   $(".goback").click(wealth.goBack);
-  Raphael("pie-chart-0", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
-  Raphael("pie-chart-1", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+  Raphael("pie-chart-0", 600, 600).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
+  Raphael("pie-chart-1", 600, 600).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
   //Raphael("pie-chart-2", 700, 700).pieChart(350, 350, 200, [100, .01], ["",""], "#fff", true);
 
 
